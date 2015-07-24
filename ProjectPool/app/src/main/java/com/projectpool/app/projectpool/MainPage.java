@@ -4,15 +4,22 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
-public class MainPage extends ActionBarActivity {
+public class MainPage extends ActionBarActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        ButtonListeners bl = new ButtonListeners();
+        View play = this.findViewById(R.id.play);
+
+        play.setOnClickListener(this);
+
+        View bet = this.findViewById(R.id.bet);
+        bet.setOnClickListener(this);
     }
 
     @Override
@@ -35,5 +42,14 @@ public class MainPage extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId()){
+            case R.id.play : TextView tv = (TextView) findViewById(R.id.textView2);
+                tv.setText("gr8 b8 m8 i r8 8.8/8.8");
+        }
     }
 }
