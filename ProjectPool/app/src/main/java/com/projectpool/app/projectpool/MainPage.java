@@ -12,6 +12,7 @@ public class MainPage extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        ButtonListeners bl = new ButtonListeners();
     }
 
     @Override
@@ -34,10 +35,5 @@ public class MainPage extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    public void showPlayPage(){
-        System.out.println("HELLO");
     }
 }
