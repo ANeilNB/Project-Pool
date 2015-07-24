@@ -15,11 +15,11 @@ public class MainPage extends ActionBarActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
         View play = this.findViewById(R.id.play);
-
         play.setOnClickListener(this);
 
         View bet = this.findViewById(R.id.leaveQueue);
         bet.setOnClickListener(this);
+
     }
 
     @Override
@@ -51,6 +51,14 @@ public class MainPage extends ActionBarActivity implements View.OnClickListener 
             case R.id.play : TextView tv = (TextView) findViewById(R.id.textView2);
                 tv.setText("gr8 b8 m8 i r8 8.8/8.8");
                 setContentView(R.layout.activity_play_page);
+                View back = this.findViewById(R.id.backButton);
+                back.setOnClickListener(this);
+                break;
+            case R.id.backButton :
+                setContentView(R.layout.activity_main_page);
+                View play = this.findViewById(R.id.play);
+                play.setOnClickListener(this);
+                break;
         }
     }
 }
