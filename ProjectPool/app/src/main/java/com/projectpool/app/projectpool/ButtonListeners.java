@@ -1,7 +1,6 @@
 package com.projectpool.app.projectpool;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +19,7 @@ public class ButtonListeners extends Activity implements OnClickListener {
 
         play.setOnClickListener(this);
 
-        View bet = this.findViewById(R.id.bet);
+        View bet = this.findViewById(R.id.leaveQueue);
         bet.setOnClickListener(this);
     }
 
